@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StartExamWindowTeacherController">
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="800.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" spacing="30.0" styleClass="upperPanel" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                            <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="Start Exam">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="500.0" prefWidth="700.0" spacing="20.0" styleClass="backGround" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="20.0" prefWidth="800.0" />
+                  <HBox alignment="CENTER" prefHeight="164.0" prefWidth="800.0" spacing="20.0">
+                     <children>
+                        <AnchorPane prefHeight="35.0" prefWidth="801.0">
+                           <children>
+                              <TableView fx:id="examsTable" layoutX="43.0" layoutY="-6.0" prefHeight="178.0" prefWidth="706.0">
+                                 <columns>
+                                    <TableColumn fx:id="examID" minWidth="50.0" prefWidth="176.5" text="Exam ID" />
+                                    <TableColumn fx:id="course" prefWidth="176.5" text="Course" />
+                                    <TableColumn fx:id="lengthOfExam" minWidth="2.0" prefWidth="176.5" text="Exam's length" />
+                                    <TableColumn fx:id="dateOfExam" prefWidth="176.5" text="Exam type" />
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                     </children></HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="800.0" spacing="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter exam code" wrappingWidth="174.4661865234375">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="TextField1" alignment="CENTER" prefWidth="42.0" promptText="c/m" />
+                        <TextField fx:id="TextField2" alignment="CENTER" prefWidth="42.0" />
+                        <TextField fx:id="TextField3" alignment="CENTER" prefWidth="42.0" />
+                        <TextField fx:id="TextField4" alignment="CENTER" prefWidth="42.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="800.0" spacing="20.0" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="80.0" spacing="200.0">
+                     <children>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Cancel" />
+                        <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextButtonClick" prefHeight="30.0" prefWidth="80.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Next" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

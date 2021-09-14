@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="498.0" prefWidth="564.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServerPortFrameController">
+   <children>
+      <Button fx:id="btnConnect" layoutX="211.0" layoutY="188.0" mnemonicParsing="false" onAction="#connectToServer" prefHeight="38.0" prefWidth="149.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Connect" textFill="#0cb447" />
+      <TextField fx:id="portxt" layoutX="26.0" layoutY="195.0" promptText="5555" text="5555" />
+      <Button fx:id="btnExit" layoutX="400.0" layoutY="377.0" mnemonicParsing="false" onAction="#getExitBtn" prefHeight="38.0" prefWidth="95.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Exit" />
+      <Label fx:id="portName" layoutX="26.0" layoutY="170.0" text="Enter port:" />
+      <Button fx:id="btnDisconnect" layoutX="383.0" layoutY="188.0" mnemonicParsing="false" onAction="#disconnectFromServer" prefHeight="38.0" prefWidth="149.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Disconnect" textFill="#d12929" />
+      <TextArea fx:id="txtLog" editable="false" layoutX="26.0" layoutY="233.0" prefHeight="98.0" prefWidth="519.0" />
+      <ImageView fitHeight="193.0" fitWidth="307.0" layoutX="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/CEMSServerConnectionlogo.PNG" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="clientConnectedLog" layoutX="26.0" layoutY="365.0" prefHeight="115.0" prefWidth="348.0" />
+      <Text layoutX="26.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connected Clients:" />
+      <Text fx:id="numOfClientLog" layoutX="131.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+   </children>
+</Pane>

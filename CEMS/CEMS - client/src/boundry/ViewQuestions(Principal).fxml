@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewQuestionsPrincipalController">
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="800.0" styleClass="backGround" stylesheets="@RootDesign.css">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" spacing="30.0" styleClass="upperPanel" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="View Questions">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top></BorderPane>
+      <Pane layoutY="124.0" prefHeight="426.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="questionsTableView" layoutX="50.0" layoutY="39.0" prefHeight="307.0" prefWidth="722.0">
+              <columns>
+                <TableColumn fx:id="subjectCol" prefWidth="149.60003662109375" text="Subject" />
+                <TableColumn fx:id="courseCol" prefWidth="398.39996337890625" text="Course" />
+                  <TableColumn fx:id="composerCol" prefWidth="173.60003662109375" text="Composer" />
+              </columns>
+            </TableView>
+            <Button fx:id="backButton" layoutX="31.0" layoutY="377.0" mnemonicParsing="false" onAction="#backButtonClick" prefHeight="35.0" prefWidth="67.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Back" />
+            <Text layoutX="125.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:" />
+            <TextField fx:id="searchTextField" layoutX="179.0" layoutY="10.0" prefHeight="25.0" prefWidth="495.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="backGround" stylesheets="@RootDesign.css" xmlns="http://javafx.com/javafx/11.0.11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewQuestionsPopupPrincipalController">
+   <children>
+      <Pane layoutX="3.0" layoutY="16.0" prefHeight="533.0" prefWidth="794.0" stylesheets="@RootDesign.css">
+         <children>
+            <Text layoutX="337.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Composer ID:" wrappingWidth="74.13667297363281" />
+            <TextArea fx:id="questionContnetTextField" editable="false" layoutX="198.0" layoutY="195.0" prefHeight="68.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <Text layoutX="94.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question content:" />
+            <Text layoutX="551.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question ID:" />
+            <Text layoutX="97.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong answer 2:" />
+            <Text layoutX="97.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong answer 3:" />
+            <Text layoutX="97.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong answer 1:" />
+            <Text layoutX="100.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct Answer:" />
+            <TextArea fx:id="wrongAnswer1TextField" editable="false" layoutX="198.0" layoutY="337.0" prefHeight="43.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <TextArea fx:id="correctAnswerTextField" editable="false" layoutX="198.0" layoutY="279.0" prefHeight="43.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <TextArea fx:id="wrongAnswer2TextField" editable="false" layoutX="198.0" layoutY="394.0" prefHeight="43.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <TextArea fx:id="wrongAnswer3TextField" editable="false" layoutX="198.0" layoutY="451.0" prefHeight="43.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <Text layoutX="141.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses:" />
+            <Text layoutX="143.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject:" />
+            <Button fx:id="backButton" layoutX="14.0" layoutY="473.0" mnemonicParsing="false" onAction="#backButtonClick" styleClass="generalButton" text="Back" />
+            <Text layoutX="337.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question details:" wrappingWidth="213.5223388671875">
+               <font>
+                  <Font name="Times New Roman Bold" size="27.0" />
+               </font></Text>
+            <TextField fx:id="subjectText" editable="false" layoutX="198.0" layoutY="110.0" prefHeight="16.0" prefWidth="127.0" />
+            <TextField fx:id="composerIDText" editable="false" layoutX="419.0" layoutY="110.0" prefHeight="16.0" prefWidth="127.0" />
+            <TextField fx:id="questionIDText" editable="false" layoutX="630.0" layoutY="110.0" prefHeight="25.0" prefWidth="136.0" />
+            <TextField fx:id="coursesText" editable="false" layoutX="198.0" layoutY="149.0" prefHeight="25.0" prefWidth="568.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+.upperPanel {
+	-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #DDE8EB, #002f43);
+	-fx-border-style: solid;
+	-fx-border-width: 1px;
+}
+.menu{
+	-fx-background-color: #ccd8dc;
+	-fx-border-style: solid;
+	-fx-border-width: 1px;
+}
+
+.backGround{
+	-fx-background-color: #DDE8EB;
+}
+
+.Button_logIn {
+    -fx-padding: 8.0 15.0 15.0 15.0;
+    -fx-background-insets: 0.0,0.0 0.0 5.0 0.0, 0.0 0.0 6.0 0.0, 0.0 0.0 7.0 0.0;
+    -fx-background-radius: 8.0;
+    -fx-background-color: 
+        linear-gradient(from 0.0% 93.0% to 0.0% 100.0%, #a5bdc1 0.0%, #002f43 100.0%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50.0% 50.0%, radius 100.0%, #a5bdc1, #002f43);
+    -fx-effect: dropshadow( gaussian , rgba(0.0,0.0,0.0,0.75) , 4.0,0.0,0.0,1.0 );
+    
+}
+.Button_logIn:hover {
+    -fx-background-color: 
+        linear-gradient(from 0.0% 93.0% to 0.0% 100.0%, #DDE8EB 0.0%, #903b12 100.0%),
+        #DDE8EB,
+        #DDE8EB,
+        radial-gradient(center 50.0% 50.0%, radius 100.0%, #a5bdc1, #002f43);
+}
+.Button_logIn:pressed {
+    -fx-padding: 10.0 15.0 13.0 15.0;
+    -fx-background-insets: 2.0 0.0 0.0 0.0,2.0 0.0 3.0 0.0, 2.0 0.0 4.0 0.0, 2.0 0.0 5.0 0.0;
+}
+.Button_logIn Text {
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #002f43 , 0.0,0.0,0.0,2.0 );
+}
+
+.upperText{
+    -fx-font: 32px Vast Shadow;
+    -fx-stroke: black;
+    -fx-stroke-width: 0.5;
+}
+
+.generalButton {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+     -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+.generalButton Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+.generalButton:pressed {
+   -fx-padding: 10.0 15.0 13.0 15.0;
+    -fx-background-insets: 2.0 0.0 0.0 0.0,2.0 0.0 3.0 0.0, 2.0 0.0 4.0 0.0, 2.0 0.0 5.0 0.0;
+}

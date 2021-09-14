@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" styleClass="backGround" stylesheets="@RootDesign.css" xmlns="http://javafx.com/javafx/11.0.11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewExamsPopupPrincipalController">
+   <children>
+      <Pane layoutX="3.0" layoutY="16.0" prefHeight="533.0" prefWidth="794.0" styleClass="backGround" stylesheets="@RootDesign.css">
+         <children>
+            <Text layoutX="585.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Composer ID:" underline="true" wrappingWidth="81.193359375">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <TextArea fx:id="questionContnetTextField" editable="false" layoutX="198.0" layoutY="204.0" prefHeight="68.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <Text layoutX="94.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question content:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="590.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question ID:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="97.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong answer 2:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="97.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong answer 3:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="97.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong answer 1:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="100.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct Answer:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <TextArea fx:id="wrongAnswer1TextField" editable="false" layoutX="198.0" layoutY="337.0" prefHeight="43.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <TextArea fx:id="correctAnswerTextField" editable="false" layoutX="198.0" layoutY="279.0" prefHeight="43.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <TextArea fx:id="wrongAnswer2TextField" editable="false" layoutX="198.0" layoutY="394.0" prefHeight="43.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <TextArea fx:id="wrongAnswer3TextField" editable="false" layoutX="198.0" layoutY="451.0" prefHeight="43.0" prefWidth="568.0" style="-fx-border-color: black;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextArea>
+            <Text layoutX="396.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="397.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Button fx:id="backButton" layoutX="14.0" layoutY="473.0" mnemonicParsing="false" onAction="#backButtonClick" styleClass="generalButton" text="Back" />
+            <Text layoutX="491.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question details:">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font></Text>
+            <ComboBox fx:id="questionNumberComboBox" layoutX="31.0" layoutY="247.0" prefHeight="25.0" prefWidth="34.0" />
+            <Text layoutX="396.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question points:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="19.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ExamID:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="249.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam date:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="249.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DurationTime:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="19.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Composer ID:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="195.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam subject:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="19.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam course:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="113.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam details:">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="15.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question select:" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Line endX="-6.79998779296875" endY="138.79998779296875" layoutX="399.0" layoutY="54.0" startX="-6.79998779296875" startY="12.400001525878906" />
+            <TextField fx:id="examIDText" layoutX="73.0" layoutY="83.0" prefHeight="25.0" prefWidth="108.0" />
+            <TextField fx:id="examSubjectText" layoutX="280.0" layoutY="81.0" prefHeight="17.0" prefWidth="101.0" />
+            <TextField fx:id="composerIDText" layoutX="666.0" layoutY="96.0" prefHeight="17.0" prefWidth="101.0" />
+            <TextField fx:id="questionPointText" layoutX="501.0" layoutY="97.0" prefHeight="25.0" prefWidth="46.0" />
+            <TextField fx:id="coursesText" layoutX="450.0" layoutY="167.0" prefHeight="25.0" prefWidth="315.0" />
+            <TextField fx:id="subjectText" layoutX="450.0" layoutY="133.0" prefHeight="17.0" prefWidth="101.0" />
+            <TextField fx:id="questionIDText" layoutX="666.0" layoutY="131.0" prefHeight="17.0" prefWidth="101.0" />
+            <TextField fx:id="examDateText" layoutX="319.0" layoutY="167.0" prefHeight="25.0" prefWidth="62.0" />
+            <TextField fx:id="examComposerIDText" layoutX="106.0" layoutY="166.0" prefHeight="25.0" prefWidth="119.0" />
+            <TextField fx:id="examCourseText" layoutX="106.0" layoutY="125.0" prefHeight="25.0" prefWidth="119.0" />
+            <TextField fx:id="examDurationText" layoutX="341.0" layoutY="125.0" prefHeight="25.0" prefWidth="40.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

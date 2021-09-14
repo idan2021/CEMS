@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TeacherMenuController">
+   <children>
+      <BorderPane fx:id="mainStage" prefHeight="550.0" prefWidth="800.0" styleClass="backGround" stylesheets="@RootDesign.css">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="800.0" spacing="30.0" styleClass="upperPanel" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text fx:id="WelcomeUserName" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="Welcome &lt;username&gt;">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <AnchorPane prefHeight="528.0" prefWidth="184.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="26.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="MENU" textAlignment="CENTER" wrappingWidth="125.47002917528152">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="logOutButton" alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="396.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="83.0" styleClass="generalButton" text="Log Out" />
+                  <ImageView fx:id="statisticsBtn" fitHeight="90.0" fitWidth="90.0" layoutX="43.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/statistics.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="questionsBtn" fitHeight="90.0" fitWidth="90.0" layoutX="42.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/questions.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="examsBtn" fitHeight="90.0" fitWidth="90.0" layoutX="43.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/Grades.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="statisticsOnHoverBtn" fitHeight="90.0" fitWidth="90.0" layoutX="43.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../resources/statisticsOnHover.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="questionsOnHoverBtn" fitHeight="90.0" fitWidth="90.0" layoutX="42.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../resources/questionsOnHover.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="examsOnHoverBtn" fitHeight="90.0" fitWidth="90.0" layoutX="43.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../resources/GradesOnHover.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="53.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="64.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exams">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="57.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="examMenu" alignment="CENTER" layoutY="1.0" prefHeight="456.0" prefWidth="616.0" spacing="30.0" visible="false">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="616.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="currentExamBtn" mnemonicParsing="false" onAction="#SwapToCurrentExamFrame" prefHeight="35.0" prefWidth="115.0" styleClass="generalButton" text="Current exam" />
+                              <Button fx:id="startExamBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#swapToStartExamFrame" prefHeight="35.0" prefWidth="115.0" styleClass="generalButton" text="Start exam" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="UploadManualExam" mnemonicParsing="false" onAction="#swapToUploadManualExamrame" prefHeight="30.0" prefWidth="220.0" styleClass="generalButton" text="Upload exam" />
+                        <Button fx:id="ComposeExamBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#swapToComposeExamFrame" prefHeight="30.0" prefWidth="220.0" styleClass="generalButton" text="Create exam">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button fx:id="checkAndApproveManualExamButton" mnemonicParsing="false" onAction="#checkAndApproveManualExamButtonClick" prefHeight="30.0" prefWidth="220.0" styleClass="generalButton" text="approve manual exams" />
+                        <Button fx:id="CheckNApproveExamsBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#swapToCheckNApproveExamsFrame" prefHeight="30.0" prefWidth="220.0" styleClass="generalButton" text=" approve computerized exams" textOverrun="CLIP" />
+                        <Button fx:id="examLibraryBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#swapToExamLibraryFrame" prefHeight="30.0" prefWidth="220.0" styleClass="generalButton" text="Exams library" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="statisticsMenu" alignment="CENTER" prefHeight="458.0" prefWidth="616.0" spacing="30.0" visible="false">
+                     <children>
+                        <Button fx:id="StatisticAnalysisBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#swapToStatisticAnalysisFrame" prefHeight="30.0" prefWidth="220.0" styleClass="generalButton" text="Statistic analysis">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="questionMenu" alignment="CENTER" prefHeight="458.0" prefWidth="616.0" spacing="30.0" visible="false">
+                     <children>
+                        <Button fx:id="composeQuestionBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#swapToComposeQuestionFrame" prefHeight="30.0" prefWidth="220.0" styleClass="generalButton" text="Compose question">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button fx:id="EditNViewQeustionBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#swapToEditNViewQeustionFrame" prefHeight="30.0" prefWidth="220.0" styleClass="generalButton" text="Edit &amp; view question" textOverrun="CLIP" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

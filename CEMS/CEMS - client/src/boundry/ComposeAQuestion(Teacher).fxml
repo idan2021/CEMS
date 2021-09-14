@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ComposeAQuestionTeacherController">
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="800.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" spacing="30.0" styleClass="upperPanel" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="Compose A Question">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="500.0" prefWidth="800.0" spacing="30.0" styleClass="backGround" stylesheets="@RootDesign.css">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select subject: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="subjectSelection" onAction="#initializeCourses" prefWidth="150.0" promptText="Subject" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Check one/few courses:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <CheckComboBox fx:id="courseSelection" prefWidth="150.0" title="Courses" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="179.0" prefWidth="800.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="57.0" prefWidth="531.0">
+                           <children>
+                              <AnchorPane prefHeight="28.0" prefWidth="531.0">
+                                 <children>
+                                    <Text layoutX="1.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fill question content:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <TextArea fx:id="questionContentTextField" prefHeight="117.0" prefWidth="531.0" promptText="Content here...." />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="104.0" prefWidth="174.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="26.0" prefWidth="153.0" spacing="27.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Fill the correct answer:" wrappingWidth="212.4453125">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="correctAnsTextField" prefHeight="30.0" prefWidth="500.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Fill wrong answer #1:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="wrongAns1TextField" prefHeight="30.0" prefWidth="500.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Fill wrong answer #2:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="wrongAns2TextField" prefHeight="30.0" prefWidth="500.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Fill wrong answer #3:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="wrongAns3TextField" prefHeight="30.0" prefWidth="500.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="800.0" spacing="200.0">
+                     <children>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelBtnClicked" prefHeight="30.0" prefWidth="80.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Back" />
+                        <Button fx:id="createButton" mnemonicParsing="false" onAction="#CreateBtnClicked" prefHeight="30.0" prefWidth="80.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Create" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

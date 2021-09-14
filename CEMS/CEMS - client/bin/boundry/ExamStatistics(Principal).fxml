@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ExamStatisticsPrincipalController">
+   <children>
+      <BorderPane fx:id="examStatisticsAnchorPane" prefHeight="550.0" prefWidth="800.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" spacing="30.0" styleClass="upperPanel" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="Exam Statistics">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="500.0" prefWidth="700.0" spacing="20.0" styleClass="backGround" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="42.0" prefWidth="800.0" />
+                  <HBox prefHeight="26.0" prefWidth="800.0" spacing="20.0">
+                     <children>
+                        <AnchorPane prefHeight="21.0" prefWidth="675.0">
+                           <children>
+                              <Text layoutX="128.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose one of the options:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="courseCheckbox" mnemonicParsing="false" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select a course:" wrappingWidth="253.53509271144867">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="courseSelection" prefHeight="25.0" prefWidth="220.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="teacherCheckbox" mnemonicParsing="false" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select a teacher:" wrappingWidth="253.76034307479858">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="teacherSelection" prefHeight="25.0" prefWidth="220.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="studentCheckbox" mnemonicParsing="false" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select a student:" wrappingWidth="253.1328411102295">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="studentSelection" prefHeight="25.0" prefWidth="220.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="80.0" spacing="200.0">
+                     <children>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClick" prefHeight="30.0" prefWidth="100.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Cancel" textFill="WHITE" />
+                        <Button fx:id="getReportButton" mnemonicParsing="false" onAction="#getReportButtonClick" prefHeight="30.0" prefWidth="100.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Get Report" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center></BorderPane>
+      <Pane fx:id="reportMedianPane" layoutX="22.0" layoutY="22.0" prefHeight="517.0" prefWidth="743.0" visible="false">
+         <children>
+            <Button fx:id="reportBackButton" layoutX="16.0" layoutY="469.0" mnemonicParsing="false" onAction="#reportBackButtonClick" prefHeight="28.0" prefWidth="74.0" text="Back" />
+            <TableView fx:id="typeReportTableView" layoutX="155.0" layoutY="312.0" prefHeight="192.0" prefWidth="569.0">
+              <columns>
+                <TableColumn fx:id="examIdCol" prefWidth="94.0" text="examID" />
+                <TableColumn fx:id="examSubjectCol" prefWidth="156.0" text="examSubject" />
+                  <TableColumn fx:id="examCourseCol" prefWidth="138.0" text="examCourse" />
+                  <TableColumn fx:id="medianCol" prefWidth="82.39996337890625" text="Median" />
+                  <TableColumn fx:id="AvgCol" prefWidth="96.00006103515625" text="Avg" />
+              </columns>
+            </TableView>
+            <Text layoutX="21.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total exams average: " wrappingWidth="168.83203125" />
+            <Text layoutX="24.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total completed exams:" wrappingWidth="183.70977783203125" />
+            <Text layoutX="21.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total exams median:" wrappingWidth="168.83203124999994" />
+            <Text fx:id="reportTypeTitle" layoutX="24.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam statistics for teacher:" wrappingWidth="637.158203125">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="155.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exams information:" />
+            <BarChart fx:id="reportDistributionBarChart" layoutX="378.0" layoutY="78.0" prefHeight="212.0" prefWidth="318.0" title="Grades distribution">
+              <xAxis>
+                <CategoryAxis fx:id="barChartCategoryAxis" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="barChartNumberAxis" prefHeight="100.0" prefWidth="30.0" side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <TextField fx:id="completedExamsTitle" editable="false" layoutX="163.0" layoutY="163.0" prefHeight="25.0" prefWidth="68.0" />
+            <TextField fx:id="examsMedianTitle" editable="false" layoutX="163.0" layoutY="214.0" prefHeight="25.0" prefWidth="68.0" />
+            <TextField fx:id="examsAvgTitle" editable="false" layoutX="163.0" layoutY="188.0" prefHeight="25.0" prefWidth="68.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

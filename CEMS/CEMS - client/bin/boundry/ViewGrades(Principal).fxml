@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewGradesPrincipalController">
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="800.0" stylesheets="@RootDesign.css">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" spacing="30.0" styleClass="upperPanel" stylesheets="@../git/CEMS/G5_assignment3/src/boundry/RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View Grades">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="500.0" prefWidth="700.0" spacing="20.0" styleClass="backGround" stylesheets="@../git/CEMS/G5_assignment3/src/boundry/RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="800.0" spacing="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select a subject:" wrappingWidth="253.53506207466125">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="subjectSelection" onAction="#initializeCourses" prefHeight="25.0" prefWidth="220.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="800.0" spacing="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select a course:" wrappingWidth="253.09365606307983">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="courseSelection" prefHeight="25.0" prefWidth="220.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="218.0" prefWidth="800.0">
+                     <children>
+                        <TableView fx:id="Grades" prefHeight="218.0" prefWidth="764.0">
+                          <columns>
+                              <TableColumn fx:id="studentID" prefWidth="134.0" text="studentID" />
+                            <TableColumn fx:id="DateOfExam" prefWidth="100.0" text="Date of exam" />
+                            <TableColumn fx:id="Grade" text="Grade" />
+                              <TableColumn fx:id="Approve" prefWidth="100.0" text="Exam append" />
+                              <TableColumn fx:id="Notes" prefWidth="195.0" text="Notes" />
+                              <TableColumn fx:id="ChangeReason" prefWidth="153.0" text="Reason for the change" />
+                          </columns>
+                        </TableView>
+                     </children></HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="65.0" prefWidth="800.0" spacing="200.0">
+                     <children>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelBtnClicked" prefHeight="30.0" prefWidth="80.0" styleClass="generalButton" stylesheets="@../git/CEMS/G5_assignment3/src/boundry/RootDesign.css" text="Cancel" />
+                        <Button fx:id="showButton" mnemonicParsing="false" onAction="#showButtonClick" prefHeight="30.0" prefWidth="80.0" styleClass="generalButton" stylesheets="@../git/CEMS/G5_assignment3/src/boundry/RootDesign.css" text="Show" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

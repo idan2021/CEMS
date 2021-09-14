@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ComputerizedExamStudentController">
+   <children>
+      <BorderPane fx:id="mainStage" prefHeight="550.0" prefWidth="800.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="800.0" spacing="30.0" styleClass="upperPanel" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="93.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="Computerized Exam">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="backGround" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="noteForStudentsTxt" editable="false" layoutX="577.0" layoutY="99.0" prefHeight="258.0" prefWidth="200.0" />
+                  <Text fx:id="questionContent" layoutX="27.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question to present (x points)" wrappingWidth="521.05078125">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <RadioButton fx:id="answer1Txt" layoutX="45.0" layoutY="180.0" mnemonicParsing="false" onAction="#answer1Selected" prefHeight="21.0" prefWidth="520.0" text="1) answer 1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="answer2Txt" layoutX="45.0" layoutY="220.0" mnemonicParsing="false" onAction="#answer2Selected" prefHeight="21.0" prefWidth="520.0" text="2) answer 2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="answer3Txt" layoutX="45.0" layoutY="260.0" mnemonicParsing="false" onAction="#answer3Selected" prefHeight="21.0" prefWidth="520.0" text="3) answer 3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="answer4Txt" layoutX="45.0" layoutY="300.0" mnemonicParsing="false" onAction="#answer4Selected" prefHeight="21.0" prefWidth="520.0" text="4) answer 4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <Text layoutX="578.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher Note:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="examDoneBtn" layoutX="604.0" layoutY="389.0" mnemonicParsing="false" onAction="#examDoneClicked" prefHeight="33.0" prefWidth="80.0" text="SUBMMIT" visible="false" />
+                  <ImageView fx:id="previousQuestionImg" fitHeight="150.0" fitWidth="120.0" layoutX="85.0" layoutY="347.0" onMouseClicked="#presentPreviousQuestion" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/arrorwLeft.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="numberOfQuestionTxt" layoutX="365.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 of 10">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="586.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time left:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="nextQuestionImg" fitHeight="200.0" fitWidth="120.0" layoutX="590.0" layoutY="346.0" onMouseClicked="#presentNextQuestion" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/arrorwRight.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="timerTxt" layoutX="674.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00:00">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="backToMainMenuBtn" layoutX="365.0" layoutY="387.0" mnemonicParsing="false" onAction="#backToMainMenuClicked" prefHeight="40.0" prefWidth="100.0" text="Main Menu" visible="false" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

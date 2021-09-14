@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentMenuController">
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="800.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="796.0" spacing="30.0" styleClass="upperPanel" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                            <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text fx:id="userNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <AnchorPane prefHeight="457.0" prefWidth="184.0" styleClass="menu" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="examsButton" fitHeight="90.0" fitWidth="90.0" layoutX="47.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/EXAMS.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="examsOnHoverButton" fitHeight="90.0" fitWidth="90.0" layoutX="47.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../resources/examOnHover.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="32.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="MENU" textAlignment="CENTER" wrappingWidth="125.47002917528152">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="gradesButton" fitHeight="90.0" fitWidth="90.0" layoutX="47.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/Gradesnew.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="gradesOnHoverButton" fitHeight="90.0" fitWidth="90.0" layoutX="47.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../resources/GradesnewOnHover.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="logOutButton" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="386.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="83.0" styleClass="generalButton" text="Log Out" />
+                  <Text layoutX="69.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grades">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="backGround" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="gradesMenu" prefHeight="449.0" prefWidth="606.0" visible="false">
+                     <children>
+                        <Button fx:id="viewGradeButton" layoutX="193.0" layoutY="182.0" mnemonicParsing="false" onAction="#SwapToViewGradeFrame" prefWidth="220.0" styleClass="generalButton" text="View Grades" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="examsMenu" prefHeight="449.0" prefWidth="606.0" visible="false">
+                     <children>
+                        <Button fx:id="performAnExamButton" layoutX="193.0" layoutY="181.0" mnemonicParsing="false" onAction="#SwapToPerformAnExamFrame" prefWidth="220.0" styleClass="generalButton" text="Perform An Exam" />
+                        <Button fx:id="getACopyOfExamButton" layoutX="193.0" layoutY="234.0" mnemonicParsing="false" onAction="#SwapToGetACopyOfExamFrame" prefWidth="220.0" styleClass="generalButton" text="Get A Copy Of Exam" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <Text layoutX="71.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exams">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

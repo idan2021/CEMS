@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewAndEditQuestion2TeacherController">
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="800.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" spacing="30.0" styleClass="upperPanel" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="View And Edit Question">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="500.0" prefWidth="800.0" spacing="30.0" styleClass="backGround" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="179.0" prefWidth="800.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="57.0" prefWidth="531.0">
+                           <children>
+                              <AnchorPane prefHeight="28.0" prefWidth="531.0">
+                                 <children>
+                                    <Text layoutX="1.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit question contact:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <TextField fx:id="questionContentTextField" alignment="TOP_LEFT" prefHeight="114.0" prefWidth="531.0" promptText="override priveious contact" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="104.0" prefWidth="174.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="26.0" prefWidth="153.0" spacing="27.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Edit the correct answer:" wrappingWidth="212.4453125">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="correctAnswerTextField" prefHeight="30.0" prefWidth="500.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="53.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Edit wrong answer #1:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="wrongAns1TextField" prefHeight="30.0" prefWidth="500.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="53.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Edit wrong answer #2:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="wrongAns2TextField" prefHeight="30.0" prefWidth="500.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="53.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Edit wrong answer #3:">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="wrongAns3TextField" prefHeight="30.0" prefWidth="500.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="800.0" spacing="200.0">
+                     <children>
+                        <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backBtnClicked" prefHeight="30.0" prefWidth="80.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Cancel" />
+                        <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#updateBtnClickd" prefHeight="30.0" prefWidth="80.0" styleClass="generalButton" stylesheets="@RootDesign.css" text="Update" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

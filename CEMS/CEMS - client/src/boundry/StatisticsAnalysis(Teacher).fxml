@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatisticsAnalysisTeacherController">
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="800.0" styleClass="backGround" stylesheets="@RootDesign.css">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" spacing="30.0" styleClass="upperPanel" stylesheets="@RootDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                            <Image url="@../resources/CEMSLogo.jpeg" />
+                     </image></ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="upperText" text="Statistics Analysis">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top></BorderPane>
+      <Pane layoutY="102.0" prefHeight="448.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="typeReportTableView" layoutX="89.0" layoutY="233.0" prefHeight="182.0" prefWidth="657.0">
+               <columns>
+                  <TableColumn fx:id="examIdCol" prefWidth="108.0" text="examID" />
+                  <TableColumn fx:id="examSubjectCol" prefWidth="142.0" text="examSubject" />
+                  <TableColumn fx:id="examCourseCol" prefWidth="138.0" text="examCourse" />
+                  <TableColumn fx:id="medianCol" prefWidth="158.0" text="Median" />
+                  <TableColumn fx:id="AvgCol" prefWidth="108.0" text="Avg" />
+               </columns>
+            </TableView>
+            <BarChart fx:id="reportDistributionBarChart" layoutX="410.0" layoutY="14.0" prefHeight="212.0" prefWidth="318.0" styleClass="backGround" stylesheets="@RootDesign.css" title="Grades distribution">
+               <xAxis>
+                  <CategoryAxis fx:id="barChartCategoryAxis" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="barChartNumberAxis" prefHeight="100.0" prefWidth="30.0" side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <Text layoutX="30.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total completed exams:" wrappingWidth="183.70977783203125" />
+            <Text layoutX="89.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exams information:" />
+            <TextField fx:id="completedExamsTitle" editable="false" layoutX="167.0" layoutY="73.0" prefHeight="25.0" prefWidth="60.0" />
+            <TextField fx:id="examsAvgTitle" editable="false" layoutX="167.0" layoutY="98.0" prefHeight="25.0" prefWidth="60.0" />
+            <TextField fx:id="examsMedianTitle" editable="false" layoutX="167.0" layoutY="120.0" prefHeight="25.0" prefWidth="60.0" />
+            <Button fx:id="backButton" layoutX="14.0" layoutY="398.0" mnemonicParsing="false" onAction="#backButtonClick" styleClass="generalButton" stylesheets="@RootDesign.css" text="Back" />
+         </children>
+      </Pane>
+      <Text layoutX="31.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total exams average: " wrappingWidth="168.83203125" />
+      <Text layoutX="31.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total exams median:" wrappingWidth="168.83203124999994" />
+   </children>
+</AnchorPane>
